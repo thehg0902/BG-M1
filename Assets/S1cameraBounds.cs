@@ -8,7 +8,7 @@ public class S1cameraBounds : MonoBehaviour
     float camYoffset;
     public Cinemachine.CinemachineVirtualCamera camera;
 
-
+ 
    
     [SerializeField]  float leftLim;
     [SerializeField]  float rightLim;
