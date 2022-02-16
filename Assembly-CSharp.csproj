@@ -61,6 +61,7 @@
     <Compile Include="Assets\sceneAssets\Scene1\Scene1 Script\playerAnim.cs" />
     <Compile Include="Assets\sceneAssets\Scene1\Scene1 Script\E1Anim.cs" />
     <Compile Include="Assets\sceneAssets\Scene1\Scene1 Script\Parallax.cs" />
+    <Compile Include="Assets\sceneAssets\MENU\script\menuButton.cs" />
     <Compile Include="Assets\sceneAssets\Scene1\Scene1 Script\changeBody.cs" />
     <Compile Include="Assets\sceneAssets\Scene1\Scene1 Script\E1Mov.cs" />
     <Compile Include="Assets\sceneAssets\Scene1\Scene1 Script\playerMov.cs" />
@@ -68,7 +69,7 @@
     <Compile Include="Assets\E1AI.cs" />
     <Compile Include="Assets\UIParticleEffects\Scripts\UIParticleSystem.cs" />
     <Compile Include="Assets\generalButton.cs" />
-    <Compile Include="Assets\sceneAssets\MENU\script\menuButton.cs" />
+    <Compile Include="Assets\paralaxManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
