@@ -5,8 +5,8 @@ using UnityEngine;
 public class changeBody : MonoBehaviour
 {
     public Cinemachine.CinemachineVirtualCamera camera;
-    public GameObject mainCharacter;
 
+    public GameObject mainCharacter;
     public GameObject currentTarget;
 
 
@@ -77,6 +77,7 @@ public class changeBody : MonoBehaviour
 
     void changeCharacter(GameObject player)
     {
+        //if you are the main character, disable move on MC and activate move on Tartet
         if (currentTarget == mainCharacter)
         {
             mainCharacter.GetComponent<playerMov>().enabled = false;
@@ -84,15 +85,16 @@ public class changeBody : MonoBehaviour
             currentTarget = player;
             player.GetComponent<E1Mov>().enabled = true;
             player.GetComponent<E1Anim>().enabled = true;
-            camera.m_Follow = player.transform;
+            gameManager.Vcamera.m_Follow = player.transform;
         }
+        //
         else {
             currentTarget.gameObject.GetComponent<E1Mov>().enabled = false;
             currentTarget.gameObject.GetComponent<E1Anim>().enabled = false;
             currentTarget = player;
             player.GetComponent<E1Mov>().enabled = true;
             player.GetComponent<E1Anim>().enabled = true;
-            camera.m_Follow = player.transform;
+            gameManager.Vcamera.m_Follow = player.transform;
         }
             
     }
@@ -107,7 +109,7 @@ public class changeBody : MonoBehaviour
         currentTarget = mainCharacter;
         mainCharacter.GetComponent<playerMov>().enabled = true;
         mainCharacter.GetComponent<playerAnim>().enabled = true;
-        camera.m_Follow = mainCharacter.transform;
+        gameManager.Vcamera.m_Follow = mainCharacter.transform;
         //camera.ForceCameraPosition(mainCharacter.transform.position, Quaternion.Euler(0, 0, 0));
         
         

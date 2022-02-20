@@ -18,9 +18,8 @@ public class Parallax : MonoBehaviour
     {
         globalMainCam = paralaxManager.mainCamera;
         //camera position
-        startpos = mainCam.transform.position.x;
-        //camera size
-       // length = camera.m_Lens.OrthographicSize;
+        startpos =transform.position.x;
+
         //global manager
         globalParalaxManager = paralaxManager.globalParalax;
     }

@@ -17,6 +17,7 @@ public class playerMov : MonoBehaviour
     [SerializeField]  float speed;
     [SerializeField]  float jumpForce;
 
+
     //ground check
     [SerializeField]  private float checkRadius = 2f;
     [SerializeField]  private Transform groundCheck;
@@ -28,11 +29,6 @@ public class playerMov : MonoBehaviour
     public BoxCollider2D myFeet;
 
 
-
-
-
-
-    
 
     void Start()
     {
@@ -70,10 +66,6 @@ public class playerMov : MonoBehaviour
     }//end update
 
 
-
-
-
-
     public void faceDirection()
     {
         if(moveInput > 0)
@@ -98,8 +90,10 @@ public class playerMov : MonoBehaviour
         }
 
 
-        //if collision is target
+        //if collision is target, ignore the collider
         Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
+
+
         //Physics2D.IgnoreCollision(collision.collider, myFeet);
         //Physics2D.IgnoreCollision(collision.collider, myHead);
     }
