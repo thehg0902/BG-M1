@@ -2,31 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class p_farSight : MonoBehaviour
 {
-    public Cinemachine.CinemachineVirtualCamera cam;
+ 
     public GameObject looktarget;
-
 
 
     void Start()
     {
-
-        //camera = gameObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
        
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+        Vector3 mousePosition = Input.mousePosition;
         if (Input.GetKeyDown(KeyCode.P))
         {
-            //camera.m_LookAt = looktarget.transform;
+            Debug.Log("look!");
+            //gameManager.Vcamera.m_LookAt = looktarget.transform;
+            //gameManager.Vtransponder.m_FollowOffset.x = 1;
+            gameManager.Vfreelook.m_LookAt = looktarget.transform;
+            //gameManager.Vcamera
+            
         }
 
        
     }
+
+
+
+
+
+
 
 
     private void OnDrawGizmos()
