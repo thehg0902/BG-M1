@@ -8,11 +8,16 @@ public class exitDoor : MonoBehaviour
     public GameObject but2;
 
     private Animator anim;
-    public Animator animfade;
+
+
+    public static float sceneIndex;
+
 
     private void Start()
     {
+        sceneIndex = 1f;
         anim = GetComponent<Animator>();
+        
     }
 
     private void Update()
@@ -26,12 +31,13 @@ public class exitDoor : MonoBehaviour
         {
             anim.SetBool("open", false);
         }
+
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        animfade.SetBool("fadeOut", true);
+        sceneIndex = 2;
     }
 
 
